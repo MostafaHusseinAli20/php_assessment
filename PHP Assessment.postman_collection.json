@@ -1,0 +1,317 @@
+{
+  "info": {
+    "_postman_id": "4c4bb4a9-1edc-4419-b83f-dd07dafba04d",
+    "name": "PHP Assessment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33597755"
+  },
+  "item": [
+    {
+      "name": "All Products",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Product",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "sku",
+              "value": "IP13",
+              "type": "text",
+              "uuid": "ea2540c7-a67e-4715-9047-27abd44e8821"
+            },
+            {
+              "key": "name",
+              "value": "IPhone 13",
+              "type": "text",
+              "uuid": "0ca21cce-f793-42e5-8a88-03aa18a2dff4"
+            },
+            {
+              "key": "price",
+              "value": "20",
+              "type": "text",
+              "uuid": "e8ec1411-e118-47ef-a3ec-5c76706db317"
+            },
+            {
+              "key": "stock_quantity",
+              "value": "1",
+              "type": "text",
+              "uuid": "cd7f690c-8153-4b3e-a4d7-d1ef2b2d44f5"
+            },
+            {
+              "key": "low_stock_threshold",
+              "value": "1",
+              "type": "text",
+              "uuid": "99fb7a2c-9004-4a6e-a87c-f0576111b831"
+            },
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text",
+              "uuid": "047c819c-d7f5-4018-a1f4-22dad6150a90"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Show Single Product",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/a2338b59-beb3-4217-8fe6-b3e6b0c73ec3",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "a2338b59-beb3-4217-8fe6-b3e6b0c73ec3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "sku",
+              "value": "IP17",
+              "type": "text",
+              "uuid": "ff18d93c-2a23-495a-992a-c3421a8542ca"
+            },
+            {
+              "key": "name",
+              "value": "IPhone 17 pro",
+              "type": "text",
+              "uuid": "2a2341e6-d749-4e55-ba06-38fe439405fd"
+            },
+            {
+              "key": "price",
+              "value": "80000",
+              "type": "text",
+              "uuid": "a6f974e1-ec01-4af0-9dd4-2cd4189d1966"
+            },
+            {
+              "key": "stock_quantity",
+              "value": "9",
+              "type": "text",
+              "uuid": "e1bd8336-f68f-48c9-8cfe-8db858d667d8"
+            },
+            {
+              "key": "low_stock_threshold",
+              "value": "6",
+              "type": "text",
+              "uuid": "6034a566-780b-4117-ab89-79866e723fdd"
+            },
+            {
+              "key": "status",
+              "value": "inactive",
+              "type": "text",
+              "uuid": "b2ffeefc-a85b-4f6d-8316-beda4253c6db"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/a2338b59-beb3-4217-8fe6-b3e6b0c73ec3",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "a2338b59-beb3-4217-8fe6-b3e6b0c73ec3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/a2329609-8db5-4439-a6ab-ab5a6f5479cf",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "a2329609-8db5-4439-a6ab-ab5a6f5479cf"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Adjust Stock",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "action",
+              "value": "increment",
+              "type": "text",
+              "uuid": "ceb3b4a3-d7e2-4b8f-9b46-a687ed7d9642"
+            },
+            {
+              "key": "quantity",
+              "value": "5",
+              "type": "text",
+              "uuid": "3b0c5031-91ed-4cb9-8b6c-d36398779019"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/a2338b59-beb3-4217-8fe6-b3e6b0c73ec3/adjust-stock",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "a2338b59-beb3-4217-8fe6-b3e6b0c73ec3",
+            "adjust-stock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Low Stock",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/low-stock",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "low-stock"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_secret_0kgk",
+      "secret": true
+    }
+  ]
+}
