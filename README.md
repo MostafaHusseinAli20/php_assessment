@@ -297,6 +297,45 @@ A Postman Collection is included with this project for testing all available end
 
 ---
 
+## Docker
+
+This project includes a Docker configuration for a multi-container environment using:
+
+- PHP 8.1 (PHP-FPM)
+- Nginx
+- PostgreSQL
+- Redis
+
+The following files are included:
+
+```
+docker/
+├── nginx/
+│   └── default.conf
+├── php/
+│   └── Dockerfile
+└── docker-compose.yml
+```
+
+To start the application using Docker:
+
+```bash
+docker compose up -d --build
+```
+
+Then run:
+
+```bash
+docker compose exec app composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan migrate
+```
+
+> **Note:**  
+> The Docker configuration has been prepared for a standard Laravel multi-container environment. Due to a local Docker Desktop installation issue on my development machine, I was unable to verify the containers locally. The provided Docker configuration follows the standard setup for Laravel with PHP, Nginx, PostgreSQL, and Redis.
+
+`
+
 # Future Improvements
 
 * Docker support
